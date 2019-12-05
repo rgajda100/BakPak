@@ -1,0 +1,57 @@
+@media (min-width: 992px){
+	.modal-lg {
+	    max-width: 900px;
+	}
+	#order-history-modal .modal-lg {
+	    max-width: 800px;
+	}
+}
+@media only screen and (max-width: 991px) {
+	/*-------------- navbar -----------------*/
+	#home-navbar .navbar-toggler-icon {
+	    color: #4a7fe3;
+	}
+	#home-navbar .nav-item {
+	    text-align: left;
+	    margin: 0;
+	    height: auto;
+	}
+	#home-navbar .navbar-toggler {
+	    margin-top: 8px;
+	}
+	/*-------------- sign in and sign up -----------------*/
+	.intro-container h1{
+		font-size: 2rem;
+	}
+	/*-------------- all tasks -----------------*/
+	.entry-row div{
+		margin-bottom: 20px;
+	}
+	/*-------------- find work -----------------*/
+	#all-tasks-section .accept-btn{
+		margin-left: 20px;
+	}	
+}
+@media only screen and (max-width: 767px) {
+	/*-------------- sign in and sign up -----------------*/
+	.intro-link{
+		display: inline-block;
+	}
+	.sign-in-page .intro-container, .sign-in-page .form-container {
+	    height: 100vh;
+	}
+	.sign-in-page .intro-container {
+	    position: relative;
+	    width: 100vw;
+	}
+	.form-title{
+		display: block;
+	}
+	.sign-up-container {
+	    padding: 70px 8vw 40px 8vw;
+	}
+	/*-------------- find work -----------------*/
+	.modal .accept-btn{
+		margin-top: 20px;
+	}	
+}
