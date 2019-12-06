@@ -47,7 +47,6 @@
                             <h2 class="h3 form-title">Sign Up</h2>
                             <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Student</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Professor</a>
                             </div>
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -95,21 +94,13 @@
                                                 Please enter your phone number.
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="studentAddress">Address</label>
-                                            <input type="text" class="form-control" name="address" id="studentAddress" required>
-                                            <div class="invalid-feedback">
-                                                Please enter your address.
-                                            </div>
-                                        </div>
-
                                         <div class="row college">
                                             <div class="col-sm-12 col-12">
                                                 <span>College</span>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <label for="collegeName">Name of College</label>
+                                                    <label for="collegeName">Name of College you attend</label>
                                                     <select class="custom-select custom-select-sm form-control" id="collegeName" name="collegeName" required>
                                                         <option value=""></option>
                                                         <option value="queensCollege">Queens College</option>
@@ -148,92 +139,6 @@
                                                   Your email is already registered. Click on "Sign In"
                                             </div>
                                     </div>
-                                    
-                                    <form id="professor-signup-form" class="registration-form form-validation" action="/sign-up" method="post" novalidate oninput='confirmPassword.setCustomValidity(confirmPassword.value != password.value ? "Passwords do not match." : "")'>
-                                        
-    
-                                        <div class="row">
-                                            <div class="col-sm-6 col-12">
-                                                  <div class="form-group">
-                                                    <label for="professorFirstName">First Name</label>
-                                                    <input type="text" class="form-control" name="professorFirstName" id="professorFirstName" required>
-                                                    <div class="invalid-feedback">
-                                                        Please enter your first name.
-                                                    </div>
-                                                  </div>
-                                            </div>
-                                            <div class="col-sm-6 col-12">
-                                                <div class="form-group">
-                                                    <label for="professorLastName">Last Name</label>
-                                                    <input type="text" class="form-control" name="professorLastName" id="professorLastName" required>
-                                                    <div class="invalid-feedback">
-                                                        Please enter your last name.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="professorEmailAddress">Email</label>
-                                            <input type="email" class="form-control" name="professorEmailAddress" id="professorEmailAddress" aria-describedby="emailHelp" required>
-                                            <div class="invalid-feedback">
-                                                Please enter a valid email address.
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="professorPhoneNumber">Phone</label>
-                                            <input type="text" class="form-control"  name="professorPhoneNumber" id="professorPhoneNumber" required>
-                                            <div class="invalid-feedback">
-                                                Please enter your phone number.
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="professorAddress">Address</label>
-                                            <input type="text" class="form-control" name="professorAddress" id="professorAddress" required>
-                                            <div class="invalid-feedback">
-                                                Please enter your address.
-                                            </div>
-                                        </div>
-                                        <div class="row college">
-                                            <div class="col-sm-12 col-12">
-                                                <span>College</span>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <label for="collegeName">Name of College</label>
-                                                    <select class="custom-select custom-select-sm form-control" id="collegeName" name="collegeName" required>
-                                                        <option value=""></option>
-                                                        <option value="queensCollege">Queens College</option>
-                                                        <option value="cityCollege">City College</option>
-                                                        <option value="hunterCollege">Hunter College</option>
-                                                        <option value="brooklynCollege">Brooklyn College</option>
-                                                    </select>
-                                                    <div class="invalid-feedback">
-                                                        Please select the college(s) that you teach in.
-                                                    </div>
-                                                </div>
-                                                <div id="additional-college"></div>
-                                            </div>
-                                            <div id="additional-colleges" class="row"></div>
-                                            <div class="col-sm-12 col-12">
-                                                <a id="add-college-btn" class="add-selection-btn">+ Add more</a>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input type="password" class="form-control" name="professorPassword" id="password" required>
-                                            <div class="invalid-feedback">
-                                                Please enter a password.
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="confirmPassword">Confirm Password</label>
-                                            <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" required>
-                                            <div class="invalid-feedback">
-                                                Please confirm your password.
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn submit-btn theme-btn">Sign Up</button>
-                                    </form>
                                   </div>
                             </div>
                         </div>

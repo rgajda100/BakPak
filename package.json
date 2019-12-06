@@ -7,18 +7,27 @@
     "start": "nodemon app.js",
     "test": "jest"
   },
-  "author": "Edgardo Molina",
+  "author": "Robert Gajda",
   "license": "ISC",
   "devDependencies": {
     "jest": "^24.8.0"
   },
   "dependencies": {
+    "bcrypt": "^3.0.7",
     "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.4",
     "express": "^4.16.1",
+    "express-flash": "0.0.2",
     "express-handlebars": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^5.9.0"
+    "primer-alerts": "^2.0.0",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.5.1",
+    "zipcodes": "^8.0.0"
   }
 }
