@@ -27,6 +27,26 @@ $(document).ready(function(){
 	    });
 		}, false);
 
+	//slide out submission form
+	
+	$("#showSubmissionForm").click(function(){
+		$('#submitForm').slideToggle();           
+	});
+
+	//create submission
+
+	// function makeAPost(section)
+	// {
+	// 	var sectionName = '#' + section;
+	// 	$(sectionName).prepend('<div class="row entry-row"><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div></div>');
+
+	// }
+
+	$('#submitPostButton').click(function(){
+		$('#postSection').prepend('<div class="row entry-row"><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div></div>');
+	});
+
+
   	//add more available button
 	$('#add-availability-btn').click(function(){
 		console.log('pass');

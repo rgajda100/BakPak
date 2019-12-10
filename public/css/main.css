@@ -173,6 +173,9 @@ a{
 	width: 100%;
     padding-top: 25px;
 }
+.submission-form{
+	width: 100%;
+}
 .form-title{
 	display: none;
 	margin-bottom: 40px;
@@ -252,7 +255,7 @@ label{
 .submit-btn{
 	display: block;
     width: 50%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
 }
 .show-error{
@@ -556,4 +559,9 @@ label.hide {display: none;}
 #card-container{
 	margin-right: 10px;
 	margin-bottom: 10px;
+}
+
+#submitForm
+{
+	display: none;
 }

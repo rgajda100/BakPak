@@ -10,11 +10,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <div class="d-flex justify-content-lg-end justify-content-start align-items-center">
-                    <a class="modal-btn" data-toggle="modal" data-target=".order-modal"><i class="fas fa-comment"></i>Create Post</a>
-                </div>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/discussion-board">Home Page</a>
             </li>
             <li class="nav-item">
@@ -32,93 +27,92 @@
 
 <section id="discussion-board-section">
     <div class="container">
-        <h2 class="h3 content-title">Queens College/CSCI</h2>
-        <div class="row entry-row">
-            <div class="col-lg-2 col-sm-6 col-6">
-                <span class="col-title">Tasker</span>
-                <p>Brenda Walker</p>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-6">
-                <span class="col-title">Services</span>
-                <span>Wash & Dry, Dry Clean</span>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-6">
-                <span class="col-title">Pickup</span>
-                <span>3:00 PM, 4/25/2019</span>
-            </div>
-            <div class="col-lg-2 col-sm-6 col-6">
-                <span class="col-title">Rate the Tasker</span>
-                <div class="taskerRating-3"></div>
-            </div>
-            <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-                <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
-            </div>
-        </div>
-        <div class="entry-row">
-            <div class="panel panel-default post-body">
-                <div class="panel-body">
-                    <h3>helllo</h3>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <textarea class="form-control post-input"></textarea>
-                    <button class="btn btn-success post-btn" onclick="alert('bruhhh')">Post this bitttch</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade order-modal" id="order-history-modal" tabindex="-1" role="dialog"
-             aria-labelledby="orderDetails" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Submit a Post</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" class="close-btn"></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form id="submission-form" class="registration-form form-validation" action="/" method="post" novalidate>
-                                <div class="row align-content-center">
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <h5 class="modal-subtitle col-title">Title</h5>
-                                                <input type="text" class="form-control" name="submissionTitle" id="submissionTitle" placeholder= 'Enter a title' required>
-                                                <div class="invalid-feedback">
-                                                    Please enter a title for this post.
-                                                </div>
-                                            </div>
+        <h2 class="h3 content-title">Queens College > (CSCI) Computer Science > General <button id="showSubmissionForm" class="btn modal-btn"><i class="fas fa-comment"></i></button></h2>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"> 
+                <div id="submitForm" class="modal-body">
+                    <div class="container-fluid">
+                        <div id="submission-form" class="submission-form form-validation">
+                            <div class="row align-content-center">
+                                <div class="col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <h5 class="modal-subtitle col-title">Title</h5>
+                                        <input type="text" class="form-control" name="submissionTitle" id="submissionTitle" placeholder= 'Enter a title' required>
+                                        <div class="invalid-feedback">
+                                            Please enter a title for this post.
                                         </div>
-                                
-                                        <div class="col-sm-6 col-12">
-                                            <div class="form-group">
-                                                <h5 class="modal-subtitle col-title">Section</h5>
-                                                <select class="custom-select custom-select-sm form-control" id="submissionSection" name="submissionSection" required>
-                                                    <option value="">Choose a Section</option>
-                                                    <option value="queensCollege">Queens College</option>
-                                                </select>   
-                                                <div class="invalid-feedback">
-                                                    Please select a section.
-                                                </div>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="col-12">
-                                            <h5 class="modal-subtitle col-title">Text</h5>
-                                            <div class="form-group">
-                                                <textarea class="form-control" name= "submissionTextArea" id="submissionTextArea" rows="5" placeholder="What's happening on campus!?"></textarea>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn submit-btn theme-btn">Submit Post</button>
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <h5 class="modal-subtitle col-title">Section</h5>
+                                        <select class="custom-select custom-select-sm form-control" id="submissionSection" name="submissionSection" required>
+                                            <option value="">Choose a Section</option>
+                                            <option value="csci101">CSCI101</option>
+                                            <option value="csci111">CSCI111</option>
+                                            <option value="csci211">CSCI211</option>
+                                            <option value="csci212">CSCI212</option>
+                                            
+                                        </select>   
+                                        <div class="invalid-feedback">
+                                            Please select a section.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <h5 class="modal-subtitle col-title">Text</h5>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name= "submissionTextArea" id="submissionTextArea" rows="5" placeholder="What's happening on campus!?"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <button id="submitPostButton" type"button" class="btn submit-btn theme-btn">Submit the Post</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
+        <section id="postSection">
+            <div class="row entry-row">
+                <div class="col-lg-2 col-sm-6 col-6">
+                    <span class="col-title">Tasker</span>
+                    <p>Brenda Walker</p>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6">
+                    <span class="col-title">Services</span>
+                    <span>Wash & Dry, Dry Clean</span>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6">
+                    <span class="col-title">Pickup</span>
+                    <span>3:00 PM, 4/25/2019</span>
+                </div>
+                <div class="col-lg-2 col-sm-6 col-6">
+                    <span class="col-title">Rate the Tasker</span>
+                    <div class="taskerRating-3"></div>
+                </div>
+                <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
+                    <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+                </div>
+            </div>
+        </section>
     </div>
 </section>
+<script>
+    function makeAPost(section){
+		var sectionName = '#' + section;
+		$(sectionName).prepend('<div class="row entry-row"><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div><div class="col-lg-2 col-sm-6 col-6"><span class="col-title">Tasker</span><p>Brenda Walker</p></div></div>');
+
+	}
+function showHideForm() {
+  var x = document.getElementById("submitForm");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
