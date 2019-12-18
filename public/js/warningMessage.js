@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('.errorMessage').collapse('show');
         setTimeout(function() { $('.errorMessage').collapse('hide'); }, 3000);
     } 
-    //Worker Sign Up Error
+    //Prof Sign Up Error
     else if(messageCode === '2'){
         $('#nav-profile').attr('class','tab-pane fade show active');
         $('#nav-home-tab').attr('class','nav-item nav-link');

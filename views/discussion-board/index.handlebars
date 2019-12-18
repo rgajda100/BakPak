@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="home-navbar">
     <a class="navbar-brand" href="#">
-        <img class="img-fluid" src="img/laundrysiteemblem.png" alt="BakPakBrand">
+        <img class="img-fluid" src="img/bakpak_emblem.png" alt="BakPakBrand">
     </a>
-    <a class="navbar-brand">BakPak</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/discussion-board">Home Page</a>
+                <a class="nav-link" href="/discussion-board"><span class="sr-only">(current)</span>Home Page</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/account">Account</a>
@@ -26,8 +26,8 @@
 </nav>
 
 <section id="discussion-board-section">
-    <div class="container">
-        <h2 class="h3 content-title">Queens College > (CSCI) Computer Science > General <button id="showSubmissionForm" class="btn modal-btn"><i class="fas fa-comment"></i></button></h2>
+    <div id="discussion-board-container" class="container">
+        <h2 id="currentSection" class="h3 content-title">Queens College > (CSCI) Computer Science > General <a id="showSubmissionForm" class="btn modal-btn float-right">What's Happening on Campus?<i class="fas fa-comment"></i></a></h2>
         <div class="modal-dialog modal-lg">
             <div class="modal-content"> 
                 <div id="submitForm" class="modal-body">
@@ -78,24 +78,164 @@
         </div>
         <section id="postSection">
             <div class="row entry-row">
-                <div class="col-lg-2 col-sm-6 col-6">
-                    <span class="col-title">Tasker</span>
-                    <p>Brenda Walker</p>
+                <div id="votes" class="col-lg-1 col-sm-1">
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-up upvote"> 23</i>
+                    </div>
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-down downvote"> 14</i>                 
+                    </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-6">
-                    <span class="col-title">Services</span>
-                    <span>Wash & Dry, Dry Clean</span>
+                <div class="col-lg-11 col-md-6">
+                    <div class="row content-section">
+                        <h5>QC > CSCI > 111 > Ryba</h5>
+                    </div>
+                    <div class="row col-title contentTitle">
+                        Recursion Project Help
+                    </div>
+                    <div class="row tagContent">
+                        <span class="tags">#HomeworkHelp #Ryba #Recursion</span>
+                    </div>
+                    <div class="row content-body">
+                        Hello, I'm trying to do project 2 and I am having trouble implementing a recursive function that returns a string backwards. Would anyone be able to help me figure out where to start?
+                    </div>
+                    <div class="row post-Icons">
+                        <i class="fas fa-star"><span class="toolbar-item">Favorite</span></i><i class="fas fa-comment-alt"><span class="toolbar-item">Comment</span></i><i class="fas fa-share-square"><span class="toolbar-item">Share</span></i><i class="fas fa-flag"><span class="toolbar-item">Report</span></i>
+                        <p class="postAuthor">Submitted by: RGajda100</p>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-6">
-                    <span class="col-title">Pickup</span>
-                    <span>3:00 PM, 4/25/2019</span>
+            </div>
+
+            {{#each submissions}}
+            <div class="row entry-row">
+                <div id="votes" class="col-lg-1 col-sm-1">
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-up upvote"> {{this.Post.upvoteTotal}}</i>
+                    </div>
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-down downvote"> {{this.Post.downvoteTotal}}</i>                 
+                    </div>
                 </div>
-                <div class="col-lg-2 col-sm-6 col-6">
-                    <span class="col-title">Rate the Tasker</span>
-                    <div class="taskerRating-3"></div>
+                <div class="col-lg-11 col-md-6">
+                    <div class="row content-section">
+                        <h5>QC > CSCI > {{this.Post.postSection}}</h5>
+                    </div>
+                    <div class="row col-title contentTitle">
+                        {{this.Post.postTitle}}
+                    </div>
+                    <div class="row tagContent">
+                        <span class="tags">{{This.Post.tags}}</span>
+                    </div>
+                    <div class="row content-body">
+                        {{this.Post.postContent}}
+                    </div>
+                    <div class="row post-Icons">
+                        <i class="fas fa-star"><span class="toolbar-item">Favorite</span></i><i class="fas fa-comment-alt"><span class="toolbar-item">Comment</span></i><i class="fas fa-share-square"><span class="toolbar-item">Share</span></i><i class="fas fa-flag"><span class="toolbar-item">Report</span></i>
+                        <p class="postAuthor">{{this.Student.firstname}} {{this.Student.lastname}}</p>
+                    </div>
                 </div>
-                <div class="col-lg-2 col-sm-12 col-12 d-flex justify-content-lg-end justify-content-start align-items-center">
-                    <a class="modal-btn" data-toggle="modal" data-target=".order-modal">View Details</a>
+            </div>
+            {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="row entry-row">
+                <div id="votes" class="col-lg-1 col-sm-1">
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-up upvote"> 134</i>
+                    </div>
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-down downvote"> 42</i>                 
+                    </div>
+                </div>
+                <div class="col-lg-11 col-md-6">
+                    <div class="row content-section">
+                        <h5>QC > CSCI > General</h5>
+                    </div>
+                    <div class="row col-title contentTitle">
+                        PSA: Queens College Tech Career Fair
+                    </div>
+                    <div class="row tagContent">
+                        <span class="tags">#Announcement #CareerFair #Tech</span>
+                    </div>
+                    <div class="row content-body">
+                        Hey guys don't forget! The Queens College tech career fair will be held in the student union 2nd floor on November 12th
+                    </div>
+                    <div class="row post-Icons">
+                        <i class="fas fa-star"><span class="toolbar-item">Favorite</span></i><i class="fas fa-comment-alt"><span class="toolbar-item">Comment</span></i><i class="fas fa-share-square"><span class="toolbar-item">Share</span></i><i class="fas fa-flag"><span class="toolbar-item">Report</span></i>
+                        <p class="postAuthor">Submitted by: CKlein230</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row entry-row">
+                <div id="votes" class="col-lg-1 col-sm-1">
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-up upvote"> 4</i>
+                    </div>
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-down downvote"> 0</i>                 
+                    </div>
+                </div>
+                <div class="col-lg-11 col-md-6">
+                    <div class="row content-section">
+                        <h5>QC > CSCI > 370</h5>
+                    </div>
+                    <div class="row col-title contentTitle">
+                        Software Engineering Textbook for sale!
+                    </div>
+                    <div class="row tagContent">
+                        <span class="tags">#selling #textbooks #softwareengineering</span>
+                    </div>
+                    <div class="row content-body">
+                        Hey guys, I'm selling my software engineering textbook. Mint condition. Feel free to message me your offers!
+                    </div>
+                    <div class="row post-Icons">
+                        <i class="fas fa-star"><span class="toolbar-item">Favorite</span></i><i class="fas fa-comment-alt"><span class="toolbar-item">Comment</span></i><i class="fas fa-share-square"><span class="toolbar-item">Share</span></i><i class="fas fa-flag"><span class="toolbar-item">Report</span></i>
+                        <p class="postAuthor">Submitted by: JDoe400</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row entry-row">
+                <div id="votes" class="col-lg-1 col-sm-1">
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-up upvote"> 9</i>
+                    </div>
+                    <div class="row justify-content-center">
+                    <i class="fas fa-chevron-down downvote"> 0</i>                 
+                    </div>
+                </div>
+                <div class="col-lg-11 col-md-6">
+                    <div class="row content-section">
+                        <h5>QC > CSCI > 335 > Goldberg</h5>
+                    </div>
+                    <div class="row col-title contentTitle">
+                        Any one want to start a study group?
+                    </div>
+                    <div class="row tagContent">
+                        <span class="tags">#StudyGroup #InformationRetrieval #csci</span>
+                    </div>
+                    <div class="row content-body">
+                        Hey guys would any of you guys who are taking Prof. Goldbers CSCI335 class want to start a study group for the semester? I heard his class is hard.
+                    </div>
+                    <div class="row post-Icons">
+                        <i class="fas fa-star"><span class="toolbar-item">Favorite</span></i><i class="fas fa-comment-alt"><span class="toolbar-item">Comment</span></i><i class="fas fa-share-square"><span class="toolbar-item">Share</span></i><i class="fas fa-flag"><span class="toolbar-item">Report</span></i>
+                        <p class="postAuthor">Submitted by: RGajda100</p>
+                    </div>
                 </div>
             </div>
         </section>
