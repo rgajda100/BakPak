@@ -133,7 +133,7 @@ Operating System: Linux/Windows
 
 Operating System: All
 ```
-1. createuser -P -s -e laundry_admin
+1. createuser -P -s -e bakpak_admin
 
 2. Use password: production
 
@@ -144,7 +144,7 @@ Operating System: All
 
 Operating System: All
 ```
-1. createdb -h localhost -U laundry_admin bakpak_development
+1. createdb -h localhost -U bakpak_admin bakpak_development
 
 2. Use password: production
 ```
