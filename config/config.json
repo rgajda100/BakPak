@@ -1,13 +1,13 @@
 {
   "development": {
-    "username": "laundry_admin",
+    "username": "bakpak_admin",
     "password": "production",
     "database": "bakpak_development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "production": {
-    "username": "laundry_admin",
+    "username": "bakpak_admin",
     "password": "production",
     "database": "bakpak_production",
     "host": "127.0.0.1",
